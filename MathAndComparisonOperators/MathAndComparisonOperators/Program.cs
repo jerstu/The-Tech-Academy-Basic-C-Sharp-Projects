@@ -40,8 +40,11 @@ namespace MathAndComparisonOperators
             int roomTemperature = 70;
             int currentTemperature = 70;
 
-            //bool isWarm = currentTemperature >= roomTemperature;
-            bool isWarm = currentTemperature == roomTemperature;
+            bool isWarm = currentTemperature >= roomTemperature;
+            Console.WriteLine(isWarm);
+            Console.ReadLine();
+
+            isWarm = currentTemperature == roomTemperature;
             Console.WriteLine(isWarm);
             Console.ReadLine();
 
