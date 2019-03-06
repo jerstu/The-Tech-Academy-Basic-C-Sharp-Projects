@@ -10,7 +10,7 @@ namespace optionalParameter
     {
         static void Main(string[] args)
         {
-            //OPClass OP1 = new OPClass() { };
+            OPClass OP1 = new OPClass() { };
 
             Console.Write("First Number: ");
             int Num1 = Convert.ToInt32(Console.ReadLine());
