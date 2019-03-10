@@ -13,7 +13,7 @@ namespace TwentyOne
 
         public abstract void Play();
 
-        public string  Dealer { get; set; }
+        public string Dealer { get; set; }
 
         public virtual void ListPlayers()
         {
