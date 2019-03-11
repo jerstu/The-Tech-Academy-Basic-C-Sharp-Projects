@@ -10,7 +10,7 @@ namespace Enums
     {
         static void Main(string[] args)
         {
-            DateTime today = DateTime.Now;
+            
             
             Console.WriteLine("Enter the current day of the week:");
             
@@ -19,7 +19,7 @@ namespace Enums
                 try
                 {
                     DaysOfTheWeek day = (DaysOfTheWeek)Enum.Parse(typeof(DaysOfTheWeek), Console.ReadLine());
-                    if ((int)day == (int)today.DayOfWeek)
+                    if ((int)day == (int)DateTime.Now.DayOfWeek)
                     {
                         Console.WriteLine("Yes, today is {0}!", day);
                     }
