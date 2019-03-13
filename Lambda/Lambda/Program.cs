@@ -37,7 +37,7 @@ namespace Lambda
             }
             Console.ReadLine();
 
-
+            // Create "Joe" List with a foreach loop
             List<Employee> foreachJoe = new List<Employee> { };
 
             foreach (Employee employee in employees)
@@ -48,27 +48,32 @@ namespace Lambda
                 }
             }
 
+            // Print "Joe" list with a foreach loop
             foreach (Employee employee in foreachJoe)
             {
                 employee.SayEmployee();
             }
             Console.ReadLine();
 
+            // Create "Joe" list with lambda function
             List<Employee> lambdaJoe = employees.Where(x => x.FirstName == "Joe").ToList();
 
-            foreach (Employee employee in lambdaJoe)
-            {
-                employee.SayEmployee();
-            }
+            // Print "Joe" list with lambda function
+            lambdaJoe.ForEach(x => x.SayEmployee());
             Console.ReadLine();
-
+            
+            // Create different list with lambda function
             List<Employee> lambda5 = employees.Where(x => x.Id > 5).ToList();
 
-            foreach (Employee employee in lambda5)
-            {
-                employee.SayEmployee();
-            }
+            // Print again with lambda function
+            lambda5.ForEach(x => x.SayEmployee());
             Console.ReadLine();
+
+            //foreach (Employee employee in lambda5)
+            //{
+            //    employee.SayEmployee();
+            //}
+            //Console.ReadLine();
         
         }    
     }
