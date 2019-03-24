@@ -16,6 +16,21 @@ namespace MoreExceptions
                 age = Convert.ToInt16(Console.ReadLine());
                 if (age == 0) throw new ZeroException();
                 if (age < 0) throw new NegativeException();
+                bool validAnswer = false;
+                while (!validAnswer)
+                {
+                    Console.Write("And have you had a birthday yet this year? (y or n): ");
+                    string answer = Console.ReadLine();
+                    if (answer == "y") validAnswer = true;
+                    else if (answer == "n")
+                    {
+                        validAnswer = true;
+                        age += 1;
+                    }
+                    else Console.WriteLine("Please enter y or n!");
+                }
+                Console.WriteLine("You were born in {0}.", DateTime.Now.Year - age);
+                Console.ReadLine();
             }
             catch (ZeroException)
             {
@@ -37,21 +52,7 @@ namespace MoreExceptions
                 Console.ReadLine();
                 return;
             }
-            bool validAnswer = false;
-            while (!validAnswer)
-            {
-                Console.Write("And have you had a birthday yet this year? (y or n): ");
-                string answer = Console.ReadLine();
-                if (answer == "y") validAnswer = true;
-                else if (answer == "n")
-                {
-                    validAnswer = true;
-                    age += 1;
-                }
-                else Console.WriteLine("Please enter y or n!");
-            }
-            Console.WriteLine("You were born in {0}.", DateTime.Now.Year - age);
-            Console.ReadLine();
+            
         }
     }
 }
